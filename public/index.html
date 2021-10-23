@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="text-gray-600 font-body">
+    <div class="grid md:grid-cols-3">
+        <div class="md:col-span-1 md:flex md:justify-end bg-gray-100">
+            <nav class="text-right">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-3xl text-green-900 font-bold uppercase p-2">
+                        <a href="/" class="hover:text-green-600">Food Ninja</a>
+                    </h1>
+
+                    <div class="px-4 cursor-pointer md:hidden" id="burger">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div>
+
+                    <ul class=" mt-6  text-sm hidden md:block" id="menu">
+                        <li class="text-gray-800 font-bold py-1">
+                            <a href="#" class="px-4 flex justify-end border-r-4 border-green-500">
+                                <span class="mr-2">Home</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class=" w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="py-1">
+                            <a href="#" class="px-4 flex justify-end border-r-4 border-white hover:border-green-500">
+                                <span class="mr-2">About</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="py-1">
+                            <a href="#" class="px-4 flex justify-end border-r-4 border-white hover:border-green-500">
+                                <span class="mr-2">Contact</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.517l2.257-1.128a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </nav>
+        </div>
+
+        <main class="px-16 py-6 bg-gray-100  md:col-span-2">
+
+            <!-- buttons -->
+            <div class="flex justify-center md:justify-end">
+                <a href="#"
+                    class="btn text-gray-900 border-green-500 md:border-2 hover:bg-green-400 hover:text-white transition ease-linear duration-500">Log
+                    in</a>
+                <a href="#"
+                    class="ml-2 btn text-gray-900 border-green-500 md:border-2 hover:bg-green-400 hover:text-white transition ease-linear duration-500">Sign
+                    up</a>
+            </div>
+
+            <header>
+                <h2 class="text-gray-700 text-4xl font-bold my-8">Recipes <span class='text-gray-500 text-2xl font-bold'>For Ninjas</span></h2>
+                
+            </header>
+
+            <div>
+                <h4 class="text-center font-bold text-xl mt-5">Latest Recipes</h4>
+
+                <div class="mt-8 grid lg:grid-cols-3 gap-10 md:gap-5 lg:gap-10 ">
+
+                    <!-- cards starts -->
+                    <div class="card hover:shadow-lg">
+                        <img src="img/stew.jpg" alt="stew" class=" h-32 sm:h-48  w-full object-cover" />
+
+                        <div class="text-center m-4">
+                            <span class="font-bold text-xl">5 Bean Chili Stew</span>
+                            <span class="block">Recipe by Mario</span>
+                        </div>
+
+                        <div class="badges">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-5" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-lg">
+                        <img src="img/noodles.jpg" alt="stew" class="w-full h-32 sm:h-48 object-cover" />
+
+                        <div class="text-center m-4">
+                            <span class="font-bold text-xl">Chicken Noodles</span>
+                            <span class="block">Recipe by Iqram</span>
+                        </div>
+
+                        <div class="badges">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-5" fill="none"
+                                viewBox="0 0 24    24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-lg">
+                        <img src="img/curry.jpg" alt="stew" class="w-full h-32 sm:h-48 object-cover" />
+
+                        <div class="text-center m-4">
+                            <span class="font-bold text-xl">Beef Curry</span>
+                            <span class="block">Recipe by Safa</span>
+                        </div>
+
+                        <div class="badges">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-5" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class=" flex justify-center">
+        <div class="btn my-10 bg-gray-200 border-green-600 border-2 hover:bg-green-700 hover:text-white transform hover:scale-125 ">Load more</div>
+    </div>
+
+    </div>
+
+    
+
+    </main>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
